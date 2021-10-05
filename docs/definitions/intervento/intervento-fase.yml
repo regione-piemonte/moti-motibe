@@ -1,0 +1,32 @@
+InterventoFase:
+  type: object
+  properties:
+    dataCancellazione:
+      type: string
+      format: date-time
+    dataEffettiva:
+      type: string
+      format: date-time
+    dataInserimento:
+      type: string
+      format: date-time
+    dataPrevista:
+      type: string
+      format: date-time
+    dataUltimaModifica:
+      type: string
+      format: date-time
+    fase:
+      type: object
+      $ref: '#/definitions/Fase'
+    id:
+      type: integer
+    intervento:
+      type: object
+      $ref: '#/definitions/Intervento'
+    utenteInserimento:
+      type: object
+      $ref: '#/definitions/Utente'
+    utenteUltimaModifica:
+      type: object
+      $ref: '#/definitions/Utente'

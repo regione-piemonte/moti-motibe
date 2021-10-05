@@ -1,0 +1,39 @@
+InterventoCosti:
+  type: object
+  properties:
+    costoPrevisto:
+      type: number
+    dataCancellazione:
+      type: string
+      format: date-time
+    dataInserimento:
+      type: string
+      format: date-time
+    dataUltimaLiquidazione:
+      type: string
+      format: date-time
+    dataUltimaModifica:
+      type: string
+      format: date-time
+    fonteDati:
+      type: string
+    fonteRiferimento:
+      type: string
+    id:
+      type: integer
+    intervento:
+      type: object
+      $ref: '#/definitions/Intervento'
+    note:
+      type: string
+    noteEconomiche:
+      type: string
+    optlock:
+      type: string
+      format: uuid
+    utenteInserimento:
+      type: object
+      $ref: '#/definitions/Utente'
+    utenteUltimaModifica:
+      type: object
+      $ref: '#/definitions/Utente'

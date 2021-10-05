@@ -1,0 +1,26 @@
+InterventoLuogo:
+  type: object
+  properties:
+    dataCancellazione:
+      type: string
+      format: date-time
+    dataInserimento:
+      type: string
+      format: date-time
+    dataUltimaModifica:
+      type: string
+      format: date-time
+    id:
+      type: integer
+    intervento:
+      type: object
+      $ref: '#/definitions/Intervento'
+    luogo:
+      type: object
+      $ref: '#/definitions/Luogo'
+    utenteInserimento:
+      type: object
+      $ref: '#/definitions/Utente'
+    utenteUltimaModifica:
+      type: object
+      $ref: '#/definitions/Utente'

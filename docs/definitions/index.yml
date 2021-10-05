@@ -1,0 +1,29 @@
+definitions:
+
+  $include: ./system/api-error.yml
+  $include: ./system/utente.yml
+
+  $include: ./decodifica/fase.yml
+  $include: ./decodifica/fonte-dati.yml
+  $include: ./decodifica/fonte-finanziamento.yml
+  $include: ./decodifica/ruolo.yml
+  $include: ./decodifica/settore.yml
+  $include: ./decodifica/situazione-criticita.yml
+  $include: ./decodifica/stato-attuaz.yml
+  $include: ./decodifica/tipo-criticita.yml
+  $include: ./decodifica/tipologia.yml
+  $include: ./decodifica/attuatore.yml
+  
+  $include: ./intervento/intervento-costi.yml
+  $include: ./intervento/intervento-dati-oti.yml
+  $include: ./intervento/intervento-fase.yml
+  $include: ./intervento/intervento-fontefin.yml
+  $include: ./intervento/intervento-luogo.yml
+  $include: ./intervento/intervento-referente.yml
+  $include: ./intervento/intervento-situazione-criticita.yml
+  $include: ./intervento/intervento.yml
+  $include: ./intervento/paged-response-intervento.yml
+  
+  $include: ./intervento/ricerca-intervento.yml
+  
+  $include: ./common/luogo.yml

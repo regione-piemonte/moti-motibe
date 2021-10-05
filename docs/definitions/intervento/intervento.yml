@@ -1,0 +1,94 @@
+Intervento:
+  type: object
+  properties:
+    attuatore:
+      type: string
+    attuatoreObj:
+      type: object
+      $ref: '#/definitions/Attuatore'
+    cig:
+      type: string
+    codIntervento:
+      type: string
+    cup:
+      type: string
+    dataBloccoModifica:
+      type: string
+      format: date-time
+    dataCancellazione:
+      type: string
+      format: date-time
+    dataInserimento:
+      type: string
+      format: date-time
+    dataUltimaModifica:
+      type: string
+      format: date-time
+    descrTecnica:
+      type: string
+    fonteDati:
+      type: object
+      $ref: '#/definitions/FonteDati'
+    fonteDatiProgrammazione:
+      type: string
+    fonteDatiRealizzazione:
+      type: string
+    id:
+      type: integer
+    idInterventoOld:
+      type: number
+    interventoCostis:
+      type: array
+      items:  
+        $ref: '#/definitions/InterventoCosti>'
+    interventoDatiOtis:
+      type: array
+      items:  
+        $ref: '#/definitions/InterventoDatiOti>'
+    interventoFases:
+      type: array
+      items:  
+        $ref: '#/definitions/InterventoFase>'
+    interventoFontefins:
+      type: array
+      items:  
+        $ref: '#/definitions/InterventoFontefin>'
+    interventoLuogos:
+      type: array
+      items:  
+        $ref: '#/definitions/InterventoLuogo>'
+    interventoReferentes:
+      type: array
+      items:  
+        $ref: '#/definitions/InterventoReferente>'
+    interventoSituazioneCriticitas:
+      type: array
+      items:  
+        $ref: '#/definitions/InterventoSituazioneCriticita>'
+    noteProgrammazione:
+      type: string
+    noteRealizzazione:
+      type: string
+    optlock:
+      type: string
+      format: uuid
+    settore:
+      type: object
+      $ref: '#/definitions/Settore'
+    statoAttuaz:
+      type: object
+      $ref: '#/definitions/StatoAttuaz'
+    tipologia:
+      type: object
+      $ref: '#/definitions/Tipologia'
+    titolo:
+      type: string
+    utenteBloccoModifica:
+      type: object
+      $ref: '#/definitions/Utente'
+    utenteInserimento:
+      type: object
+      $ref: '#/definitions/Utente'
+    utenteUltimaModifica:
+      type: object
+      $ref: '#/definitions/Utente'

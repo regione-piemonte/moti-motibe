@@ -1,0 +1,7 @@
+TipoCriticita:
+  type: object
+  properties:
+    descrizioneTipoCriticita:
+      type: string
+    id:
+      type: integer

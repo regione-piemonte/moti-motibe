@@ -1,0 +1,11 @@
+Ruolo:
+  type: object
+  properties:
+    accessoSistema:
+      type: integer
+    codRuolo:
+      type: string
+    descrizioneRuolo:
+      type: string
+    id:
+      type: integer

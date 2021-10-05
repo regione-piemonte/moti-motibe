@@ -1,0 +1,11 @@
+Tipologia:
+  type: object
+  properties:
+    descrizione:
+      type: string
+    elemDefault:
+      type: number
+    id:
+      type: integer
+    ordine:
+      type: number

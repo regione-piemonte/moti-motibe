@@ -1,0 +1,11 @@
+InterventoReferente:
+  type: object
+  properties:
+    id:
+      type: integer
+    intervento:
+      type: object
+      $ref: '#/definitions/Intervento'
+    utente:
+      type: object
+      $ref: '#/definitions/Utente'

@@ -1,0 +1,37 @@
+InterventoFontefin:
+  type: object
+  properties:
+    dataCancellazione:
+      type: string
+      format: date-time
+    dataInserimento:
+      type: string
+      format: date-time
+    dataUltimaModifica:
+      type: string
+      format: date-time
+    descrizione:
+      type: string
+    fonteDati:
+      type: object
+      $ref: '#/definitions/FonteDati'
+    fonteFinanziamento:
+      type: object
+      $ref: '#/definitions/FonteFinanziamento'
+    id:
+      type: integer
+    importoLiquidato:
+      type: number
+    importoStanziato:
+      type: number
+    intervento:
+      type: object
+      $ref: '#/definitions/Intervento'
+    note:
+      type: string
+    utenteInserimento:
+      type: object
+      $ref: '#/definitions/Utente'
+    utenteUltimaModifica:
+      type: object
+      $ref: '#/definitions/Utente'

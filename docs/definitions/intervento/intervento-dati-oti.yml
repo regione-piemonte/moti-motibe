@@ -1,0 +1,33 @@
+InterventoDatiOti:
+  type: object
+  properties:
+    annoInizioLavori:
+      type: number
+    annoProssimaFase:
+      type: number
+    annoUltimazioneOpera:
+      type: number
+    dataUltimoAggiornamento:
+      type: string
+      format: date-time
+    descrizioneProgettazione:
+      type: string
+    dettagliProssimaFase:
+      type: string
+    dettaglioCosti:
+      type: string
+    finanziamentiDisponibili:
+      type: number
+    finanziamentiNonDisponibili:
+      type: number
+    id:
+      type: integer
+    intervento:
+      type: object
+      $ref: '#/definitions/Intervento'
+    rispettoTempi:
+      type: string
+    soggettiCoinvolti:
+      type: string
+    urlDaRichiamare:
+      type: string

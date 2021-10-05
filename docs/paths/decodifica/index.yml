@@ -1,0 +1,239 @@
+/decodifica/tipo-criticita:
+  get:
+    operationId: getTipoCriticita
+    description: Restituisce dati registrati su sistema.
+    produces:
+      - application/json
+    tags:
+      - decodifica
+    parameters:
+    responses:
+      '200':
+        description: Dati registrati su sistema.
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/TipoCriticita'
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'
+/decodifica/fonte-dati:
+  get:
+    operationId: getFonteDati
+    description: Restituisce dati registrati su sistema.
+    produces:
+      - application/json
+    tags:
+      - decodifica
+    parameters:
+    responses:
+      '200':
+        description: Dati registrati su sistema.
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/FonteDati'
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'
+/decodifica/settore:
+  get:
+    operationId: getSettore
+    description: Restituisce dati registrati su sistema.
+    produces:
+      - application/json
+    tags:
+      - decodifica
+    parameters:
+    responses:
+      '200':
+        description: Dati registrati su sistema.
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/Settore'
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'
+/decodifica/ruolo:
+  get:
+    operationId: getRuolo
+    description: Restituisce dati registrati su sistema.
+    produces:
+      - application/json
+    tags:
+      - decodifica
+    parameters:
+    responses:
+      '200':
+        description: Dati registrati su sistema.
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/Ruolo'
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'
+/decodifica/stato-attuaz:
+  get:
+    operationId: getStatoAttuaz
+    description: Restituisce dati registrati su sistema.
+    produces:
+      - application/json
+    tags:
+      - decodifica
+    parameters:
+    responses:
+      '200':
+        description: Dati registrati su sistema.
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/StatoAttuaz'
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'
+/decodifica/fase/{tipologia}/{idFonteDati}:
+  get:
+    operationId: getFase
+    description: Restituisce dati registrati su sistema.
+    produces:
+      - application/json
+    tags:
+      - decodifica
+    parameters:
+      - in: path
+        name: tipologia
+        required: true
+        type: string
+        description: tipologia della fase.
+      - in: path
+        name: idFonteDati
+        required: true
+        type: integer
+        description: idFonteDati della fase.
+    responses:
+      '200':
+        description: Dati registrati su sistema.
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/Fase'
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'
+/decodifica/fonte-finanziamento:
+  get:
+    operationId: getFonteFinanziamento
+    description: Restituisce dati registrati su sistema.
+    produces:
+      - application/json
+    tags:
+      - decodifica
+    parameters:
+    responses:
+      '200':
+        description: Dati registrati su sistema.
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/FonteFinanziamento'
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'
+/decodifica/situazione-criticita:
+  get:
+    operationId: getSituazioneCriticita
+    description: Restituisce dati registrati su sistema.
+    produces:
+      - application/json
+    tags:
+      - decodifica
+    parameters:
+    responses:
+      '200':
+        description: Dati registrati su sistema.
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/SituazioneCriticita'
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'
+/decodifica/tipologia:
+  get:
+    operationId: getTipologia
+    description: Restituisce dati registrati su sistema.
+    produces:
+      - application/json
+    tags:
+      - decodifica
+    parameters:
+    responses:
+      '200':
+        description: Dati registrati su sistema.
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/Tipologia'
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'
+/decodifica/attuatore:
+  post:
+    operationId: postAttuatore
+    description: Restituisce dati registrati su sistema.
+    produces:
+      - application/json
+    tags:
+      - decodifica
+    parameters:
+      - in: body
+        name: attuatore
+        required: true
+        schema:
+          $ref: '#/definitions/Attuatore'
+    responses:
+      '200':
+        description: Dati registrati su sistema.
+        schema:
+          $ref: '#/definitions/Attuatore'
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'
+
+/decodifica/attuatore/ricerca:
+  post:
+    operationId: postRicercaAttuatore
+    description: Restituisce dati registrati su sistema.
+    produces:
+      - application/json
+    tags:
+      - decodifica
+    parameters:
+      - in: body
+        name: attuatore
+        required: true
+        schema:
+          $ref: '#/definitions/Attuatore'
+    responses:
+      '200':
+        description: Dati registrati su sistema.
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/Attuatore'
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'

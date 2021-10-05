@@ -1,0 +1,5 @@
+paths:
+  $include: ./utente/index.yml
+  $include: ./common/index.yml
+  $include: ./decodifica/index.yml
+  $include: ./intervento/index.yml

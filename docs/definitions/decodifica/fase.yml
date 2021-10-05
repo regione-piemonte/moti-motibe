@@ -1,0 +1,14 @@
+Fase:
+  type: object
+  properties:
+    descrizione:
+      type: string
+    fonteDati:
+      type: object
+      $ref: '#/definitions/FonteDati'
+    id:
+      type: integer
+    ordine:
+      type: number
+    tipologia:
+      type: string

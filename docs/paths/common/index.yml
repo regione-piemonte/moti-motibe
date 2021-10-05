@@ -1,0 +1,20 @@
+/common/luogo:
+  get:
+    operationId: getLuogo
+    description: Restituisce dati registrati su sistema.
+    produces:
+      - application/json
+    tags:
+      - common
+    parameters:
+    responses:
+      '200':
+        description: Dati registrati su sistema.
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/Luogo'
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'

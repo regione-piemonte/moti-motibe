@@ -1,0 +1,231 @@
+/int/intervento/{id}:
+  put:
+    operationId: putInterventoById
+    description: Restituisce dati registrati su sistema.
+    produces:
+      - application/json
+    tags:
+      - intervento
+    parameters:
+      - in: path
+        name: id
+        required: true
+        type: integer
+        description: intervento
+      - in: body
+        name: intervento
+        required: true
+        schema:
+          $ref: '#/definitions/Intervento'
+    responses:
+      '200':
+        description: Dati registrati su sistema.
+        schema:
+          $ref: '#/definitions/Intervento'
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'
+  get:
+    operationId: getIntervento
+    description: Restituisce dati registrati su sistema.
+    produces:
+      - application/json
+    tags:
+      - intervento
+    parameters:
+      - in: path
+        name: id
+        required: true
+        type: integer
+        description: id
+    responses:
+      '200':
+        description: Dati registrati su sistema.
+        schema:
+          $ref: '#/definitions/Intervento'
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'
+          
+  post:
+    operationId: deleteIntervento
+    description: Cancella l'intervento per id.
+    produces:
+      - application/json
+    tags:
+      - intervento
+    parameters:
+      - in: header
+        name: X-HTTP-Method-Override
+        type: string
+        required: true
+      - in: path
+        name: id
+        required: true
+        type: integer
+        description: L'id dell'intervento.
+      - in: body
+        name: intervento
+        required: true
+        schema:
+          $ref: '#/definitions/Intervento'
+    responses:
+      '200':
+        description: Lo status dell'operazione.
+        schema:
+          type: string
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError' 
+         
+/int/intervento/codice/{codIntervento}:
+  get:
+    operationId: getInterventoByCodIntervento
+    description: Restituisce dati registrati su sistema.
+    produces:
+      - application/json
+    tags:
+      - intervento
+    parameters:
+      - in: path
+        name: codIntervento
+        required: true
+        type: string
+        description: codice
+    responses:
+      '200':
+        description: Dati registrati su sistema.
+        schema:
+          $ref: '#/definitions/Intervento'
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'
+/int/intervento:
+  post:
+    operationId: postIntervento
+    description: Restituisce dati registrati su sistema.
+    produces:
+      - application/json
+    tags:
+      - intervento
+    parameters:
+      - in: body
+        name: intervento
+        required: true
+        schema:
+          $ref: '#/definitions/Intervento'
+    responses:
+      '200':
+        description: Dati registrati su sistema.
+        schema:
+          $ref: '#/definitions/Intervento'
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'
+/int/intervento/ricerca:
+  post:
+    operationId: getRicercaInterventi
+    description: Restituisce dati registrati su sistema.
+    produces:
+      - application/json
+    tags:
+      - intervento
+    parameters:
+      - $ref: '#/parameters/offsetParam'
+      - $ref: '#/parameters/limitParam'
+      - $ref: '#/parameters/sortParam'
+      - $ref: '#/parameters/directionParam'
+      - in: body
+        name: ricercaIntervento
+        required: true
+        schema:
+          $ref: '#/definitions/RicercaIntervento'
+    responses:
+      '200':
+        description: Dati registrati su sistema.
+        schema:
+          $ref: '#/definitions/PagedResponseIntervento'
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'
+/int/intervento/esporta/{id}:
+  get:
+    operationId: getEsportaIntervento
+    description: Restituisce l'allegato dell'intervento selezionato.
+    produces:
+      - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+      - application/vnd.ms-excel
+      - application/pdf
+    tags:
+      - intervento
+    parameters:
+      - in: path
+        name: id
+        required: true
+        type: integer
+        description: intervento
+    responses:
+      '200':
+        description: Il file.
+        schema:
+          type: file
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'
+/int/intervento/esporta-lista:
+  post:
+    operationId: postEsportaListaInterventi
+    description: Restituisce l'allegato degli interventi selezionati.
+    produces:
+      - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+      - application/vnd.ms-excel
+      - application/pdf
+    tags:
+      - intervento
+    parameters:
+      - in: body
+        name: pagedResponseIntervento
+        required: true
+        schema:
+          $ref: '#/definitions/PagedResponseIntervento'
+    responses:
+      '200':
+        description: Il file.
+        schema:
+          type: file
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'
+/int/intervento/esporta-ricerca:
+  post:
+    operationId: postEsportaRicercaIntervento
+    description: Restituisce l'allegato degli interventi ricercati.
+    produces:
+      - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+      - application/vnd.ms-excel
+      - application/pdf
+    tags:
+      - intervento
+    parameters:
+      - in: body
+        name: ricercaIntervento
+        required: true
+        schema:
+          $ref: '#/definitions/RicercaIntervento'
+    responses:
+      '200':
+        description: Il file.
+        schema:
+          type: file
+      default:
+        description: Errore generico.
+        schema:
+          $ref: '#/definitions/ApiError'

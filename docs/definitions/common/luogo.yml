@@ -1,0 +1,17 @@
+Luogo:
+  type: object
+  properties:
+    denomLuogo:
+      type: string
+    denomRegione:
+      type: string
+    flagProvincia:
+      type: integer
+    id:
+      type: integer
+    luogoIstat:
+      type: string
+    regioneIstat:
+      type: string
+    sigla:
+      type: string

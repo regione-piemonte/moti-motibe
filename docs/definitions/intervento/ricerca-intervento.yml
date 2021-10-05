@@ -1,0 +1,21 @@
+RicercaIntervento:
+  type: object
+  properties:
+    codIntervento:
+      type: string
+    fonteDati:
+      type: object
+      $ref: '#/definitions/FonteDati'
+    luogos:
+      type: array
+      items:  
+        $ref: '#/definitions/Luogo>'
+    referentes:
+      type: array
+      items:  
+        $ref: '#/definitions/Utente>'
+    tipologia:
+      type: object
+      $ref: '#/definitions/Tipologia'
+    titolo:
+      type: string

@@ -1,0 +1,36 @@
+InterventoSituazioneCriticita:
+  type: object
+  properties:
+    dataCancellazione:
+      type: string
+      format: date-time
+    dataInserimento:
+      type: string
+      format: date-time
+    dataUltimaModifica:
+      type: string
+      format: date-time
+    descrizione:
+      type: string
+    fonteDati:
+      type: object
+      $ref: '#/definitions/FonteDati'
+    id:
+      type: integer
+    intervento:
+      type: object
+      $ref: '#/definitions/Intervento'
+    situazioneCriticita:
+      type: object
+      $ref: '#/definitions/SituazioneCriticita'
+    situazioneCriticitaDescrizione:
+      type: string
+    tipoCriticita:
+      type: object
+      $ref: '#/definitions/TipoCriticita'
+    utenteInserimento:
+      type: object
+      $ref: '#/definitions/Utente'
+    utenteUltimaModifica:
+      type: object
+      $ref: '#/definitions/Utente'

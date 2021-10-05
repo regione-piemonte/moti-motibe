@@ -1,0 +1,29 @@
+Utente:
+  type: object
+  properties:
+    codiceFiscale:
+      type: string
+    cognome:
+      type: string
+    dataCancellazione:
+      type: string
+      format: date-time
+    dataInserimento:
+      type: string
+      format: date-time
+    dataUltimaModifica:
+      type: string
+      format: date-time
+    email:
+      type: string
+    flagAccessoSistema:
+      type: integer
+    id:
+      type: integer
+    nome:
+      type: string
+    ruolo:
+      type: object
+      $ref: '#/definitions/Ruolo'
+    telefono:
+      type: string

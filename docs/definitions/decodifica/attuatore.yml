@@ -1,0 +1,15 @@
+Attuatore:
+  type: object
+  properties:
+    codiceFiscale:
+      type: string
+    dataInserimento:
+      type: string
+      format: date-time
+    descrizione:
+      type: string
+    id:
+      type: integer
+    utenteInserimento:
+      type: object
+      $ref: '#/definitions/Utente'

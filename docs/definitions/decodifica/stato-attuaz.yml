@@ -1,0 +1,9 @@
+StatoAttuaz:
+  type: object
+  properties:
+    descrizione:
+      type: string
+    id:
+      type: integer
+    ordine:
+      type: number
